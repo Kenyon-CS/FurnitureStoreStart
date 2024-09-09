@@ -1,3 +1,5 @@
+#include "Furniture.h"
+
 class Chair : public Furniture {
 private:
     bool hasArmrest;
