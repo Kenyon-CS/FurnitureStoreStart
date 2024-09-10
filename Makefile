@@ -1,33 +1,40 @@
-# Makefile
-
-# Compiler
+# Compiler and flags
 CXX = g++
+CXXFLAGS = -Wall -std=c++11
 
-# Compiler Flags
-CXXFLAGS = -Wall -Wextra -std=c++17 -g
+# Target executable
+TARGET = furniture_test
 
-# Targets
-TARGET = test_furniture
-OBJECTS = main.o Furniture.o
+# Object files
+OBJECTS = main.o Furniture.o Chair.o Table.o Sofa.o
 
 # Default target
 all: $(TARGET)
 
-# Link the executable
+# Build the target
 $(TARGET): $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
 
-# Compile main.cpp to main.o
-main.o: main.cpp Furniture.h
+# Compile main.cpp
+main.o: main.cpp Furniture.h Chair.h Table.h Sofa.h
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-# Compile Furniture.cpp to Furniture.o
+# Compile Furniture.cpp
 Furniture.o: Furniture.cpp Furniture.h
 	$(CXX) $(CXXFLAGS) -c Furniture.cpp
 
-# Clean up build files
-clean:
-	rm -f $(TARGET) $(OBJECTS)
+# Compile Chair.cpp
+Chair.o: Chair.cpp Chair.h Furniture.h
+	$(CXX) $(CXXFLAGS) -c Chair.cpp
 
-# Phony targets
-.PHONY: all clean
+# Compile Table.cpp
+Table.o: Table.cpp Table.h Furniture.h
+	$(CXX) $(CXXFLAGS) -c Table.cpp
+
+# Compile Sofa.cpp
+Sofa.o: Sofa.cpp Sofa.h Furniture.h
+	$(CXX) $(CXXFLAGS) -c Sofa.cpp
+
+# Clean up object files and executable
+clean:
+	rm -f $(OBJECTS) $(TARGET)
