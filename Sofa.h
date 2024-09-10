@@ -1,3 +1,5 @@
+#include "Furniture.h"
+
 class Sofa : public Furniture {
 private:
     int numOfSeats;
