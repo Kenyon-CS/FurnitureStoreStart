@@ -16,6 +16,9 @@ public:
     Furniture(std::string n, double p, int q)
         : name(n), price(p), quantity(q), inventoryID(nextID++) {}
 
+    // Virtual destructor to ensure proper cleanup in derived classes
+    virtual ~Furniture() {}
+
     // Getters
     std::string getName() const { return name; }
     double getPrice() const { return price; }
