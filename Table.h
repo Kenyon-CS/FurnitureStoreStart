@@ -1,3 +1,5 @@
+#include "Furniture.h"
+
 class Table : public Furniture {
 private:
     int numOfLegs;
