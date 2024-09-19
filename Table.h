@@ -17,4 +17,4 @@ public:
         std::cout << "Number of Legs: " << numOfLegs << std::endl;
     }
 };
-#endif TABLE_H
+#endif // TABLE_H
