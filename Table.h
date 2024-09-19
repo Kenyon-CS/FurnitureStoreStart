@@ -1,3 +1,6 @@
+#ifndef TABLE_H
+#define TABLE_H
+
 #include "Furniture.h"
 
 class Table : public Furniture {
@@ -14,3 +17,4 @@ public:
         std::cout << "Number of Legs: " << numOfLegs << std::endl;
     }
 };
+#endif TABLE_H
