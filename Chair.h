@@ -1,3 +1,5 @@
+#ifndef CHAIR_H
+#define CHAIR_H
 #include "Furniture.h"
 
 class Chair : public Furniture {
@@ -16,3 +18,4 @@ public:
         std::cout << "Armrest: " << (hasArmrest ? "Yes" : "No") << std::endl;
     }
 };
+#endif // CHAIR_H
