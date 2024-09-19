@@ -1,3 +1,5 @@
+#ifndef FURNITURE_H
+#define FURNITURE_H
 #include <iostream>
 #include <string>
 
@@ -40,3 +42,4 @@ public:
 
 // Initialize static variable
 int Furniture::nextID = 1;
+#endif // FURNITURE_H
