@@ -1,10 +1,12 @@
 // main.cpp
-#include "Furniture.h"
+#include "Sofa.h"
+#include "Table.h"
+#include "Chair.h"
 #include <cassert>
 
 int main() {
     // Test 1: Create a Furniture object using the constructor
-    Furniture chair("Office Chair", 149.99, 10);
+    Chair chair("Office Chair", 149.99, 10, true);
     chair.display();
 
     // Test 2: Test getter methods
@@ -27,8 +29,8 @@ int main() {
     std::cout << "Setters passed." << std::endl;
 
     // Test 4: Test multiple Furniture objects
-    Furniture table("Dining Table", 299.99, 3);
-    Furniture sofa("Leather Sofa", 499.99, 2);
+    Table table("Dining Table", 299.99, 3, 6);
+    Sofa sofa("Leather Sofa", 499.99, 2, 4);
 
     table.display();
     sofa.display();
